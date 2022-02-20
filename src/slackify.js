@@ -121,9 +121,9 @@ const createHandlers = definitions => ({
     const exit = context.enter('text');
     // https://api.slack.com/reference/surfaces/formatting#escaping
     const text = node.value
-      .replace(/&/g, '&amp;')
-      .replace(/</g, '&lt;')
-      .replace(/>/g, '&gt;');
+      .replace(/&/g, '&amp;');
+      // .replace(/</g, '&lt;')
+      // .replace(/>/g, '&gt;');
     exit();
 
     // Do we need more escaping like the default handler uses?
